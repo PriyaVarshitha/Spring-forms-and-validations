@@ -1,0 +1,32 @@
+Health Insurance Processing	
+	-12Sep2023
+
+
+=> 
+
+
+POST		/NetworkHospitals		-create all network hospitals
+
+POST		/InsurancePackages		-create all insurance packages
+
+POST		/CoveredDisceases		-create all covered 
+
+GET		/NetworkHospitals		-list all network hospitals
+
+GET		/InsurancePackages		-list all insurance packages
+
+GET		/CoveredDisceases		-list all covered 
+
+POST		/Users				-Create/Register User
+						-Accept user details and return user details with 							confirm sts
+
+PUT		/Users				-Update User
+							contact details,
+
+POST		/login				-Verify login
+						-Accept user details and return security hash key
+
+POST		/Insurance			-Create New Insurance
+PUT		/Insurance			-Update Insurance (premimum, insured amount, address...)
+
+POST		/PremiumPayments		-Making Insurance Payments

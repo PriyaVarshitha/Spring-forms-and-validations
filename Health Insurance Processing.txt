@@ -1,0 +1,90 @@
+Health Insurance Processing	
+	-12Sep2023
+
+
+InsurancePackages
+
+insp_id				int
+insp_title			v(60)
+insp_status			c(2)
+insp_cdate			date
+
+NetworkHospitals
+This table stores network hospitals
+
+hosp_id				int
+hosp_title			v(70)
+hosp_location			v(50)
+hosp_adress			v(100)
+hosp_contactmobile		int(10)
+hosp_contactphone		int(10)
+hosp_pincode			int(6)
+hosp_luudate			date
+hosp_luuser			int
+
+Customers
+This table stores all customers
+
+cust_id				int
+cust_fname			v(50)
+cust_lname			v(50)
+cust_dob			date
+cust_address			v(255)
+cust_gender			c(1)
+cust_cdate			date
+cust_aadhar			int(12)
+cust_status			c(2)
+cust_luudate			date
+cust_luuser			int
+
+users
+This table stores users
+
+user_id				int
+user_name
+user_cdate			date
+user_pwd			v(100)
+user_type			c(4)		ADMN/CUST
+user_status			c(2)
+
+Disceases
+This table stores different covered disceases
+
+disc_id				int
+disc_name			v(100)
+disc_icdcode			v(10)
+disc_desc			v(255)
+disc_status			c(2)
+
+InsurancePackages
+This table stores insurance packages
+
+insp_id				int
+insp_title			v(60)
+insp_desc			v(255)
+insp_status			c(2)
+insp_range_start		numeric
+insp_range_end			numeric
+insp_agelimit_start		int
+insp_agelimit_end		int
+
+InsurancePackageCoveredDisceases
+insp_id				int
+disc_id				int		CP(1,2)
+
+
+Insurance
+This table stores Insurance
+
+insr_id				int		PK
+insr_cust_id			int
+insr_cdate			date		//created date
+insr_sum_assured		numeric
+insr_insp_id			int		FK
+insr_yrly_prem_amount		numeric
+insr_stdate			date		//insurance start date
+
+
+
+
+
